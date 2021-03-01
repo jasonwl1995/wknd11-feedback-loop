@@ -6,13 +6,14 @@ function Feelings() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [feeling, setFeeling] = useState(0);
+  const [feeling, setFeeling] = useState(1);
 
   const onNext = (evt) => {
     evt.preventDefault();
 
-    if ( feeling === 0 || feeling === null || feeling === undefined) {
-      alert(Please enter a number between 1 and 5);
+    // if input 'require' action works, do not need to check null or 0
+    if ( /*feeling === 0 || feeling === null || */ feeling === undefined) {
+      alert("Please enter a number between 1 and 5");
       return;
     }
 
@@ -22,17 +23,28 @@ function Feelings() {
       payload: feeling
     });
 
-    // Clear imput
+    // Clear input
     setFeeling(0);
 
     // Go to Understanding Page
-    history.push('/understanding');
+    history.push('/review');
   }
 
   return (
     <>
+      <div>
+        <h2>How are you feeling today?</h2>
 
+        <div> Feeling? </div>
 
+        <input type="number" max="5" min="1" 
+                value = {feeling}
+                onChange= {(evt) => setFeeling(evt.target.value)}
+                required 
+        />
+
+        <button onClick={onNext}>NEXT</button>
+      </div>
     </>
   );
 }

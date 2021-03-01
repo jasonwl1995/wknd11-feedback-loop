@@ -10,8 +10,16 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 const feedbackReducer = (state = {}, action) => {
+  switch (action.type) {
+      case 'UPDATE_FEELING':
+        console.log('state', state);
+        return {...state, feelingInput: action.payload};
 
-  return state;
+      break;
+      default:
+        return state;
+  }
+
 };
 // End feedbackReducer
 
