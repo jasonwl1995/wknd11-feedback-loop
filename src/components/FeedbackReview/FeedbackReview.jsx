@@ -7,14 +7,10 @@ function Review() {
   const history = useHistory();
 
   const feedbackInput = useSelector((store) => store.feedbackReducer);
-
+  console.log('input', feedbackInput);
   const onSubmit = () => {
     console.log('submit');
-    axios({
-      method: 'POST',
-      url: '/feedback',
-      data: feedbackInput.feelingInput,
-    })
+    axios.post('/feedback', feedbackInput)
     .then((res) => {
       console.log('POST response', res);
       clearFeedbackInput();

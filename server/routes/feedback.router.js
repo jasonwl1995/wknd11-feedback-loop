@@ -19,7 +19,8 @@ router.post('/', (req, res) => {
     feedbackSubmit.supportedInput,
     feedbackSubmit.comments,
   ];
-
+  console.log('data', paramArgs);
+  
   pool.query(sqlText, paramArgs)
     .then((res) => {
       console.log('post request completed', res);

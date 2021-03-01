@@ -23,8 +23,10 @@ const feedbackReducer = (state = {}, action) => {
         break;
       case 'UPDATE_COMMENTS':
         return {...state, comments: action.payload};
-  
-      break;
+        break;
+      case 'CLEAR_FEEDBACK_INPUT':
+        return {};
+        break;
       default:
         return state;
   }
