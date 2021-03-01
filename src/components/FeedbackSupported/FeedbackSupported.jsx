@@ -26,7 +26,7 @@ function Support() {
     setSupport(1);
 
     // Go to comments Page
-    history.push('/review');
+    history.push('/comment');
   }
 
   return (
