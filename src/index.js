@@ -9,7 +9,11 @@ import { createStore, combineReducers, applyMiddleware} from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
+const feedbackReducer = (state = {}, action) => {
 
+  return state;
+};
+// End feedbackReducer
 
 
 // Create Store
