@@ -1,0 +1,18 @@
+Server
+[x] Pool
+[x] Router request body arguments to match with client side
+[x] Router post
+[x] Server
+
+Client
+[x] App
+[x] App Routes
+[x] Feeling  // change back history to /understanding
+[x] Understanding
+[x] Support
+[x] Comment
+[x] Review
+[x] Confirm
+
+[-] Index 
+   [x] Finish feedbackReducer
