@@ -10,7 +10,9 @@ import FeedbackUnderstanding from '../FeedbackUnderstanding/FeedbackUnderstandin
 import FeedbackSupported from '../FeedbackSupported/FeedbackSupported';
 import FeedbackComments from '../FeedbackComments/FeedbackComments';
 import FeedbackReview from '../FeedbackReview/FeedbackReview';
+import FeedbackSuccess from '../FeedbackSuccess/FeedbackSuccess';
 
+// Main function that routes to different pages. Uses only client side router.
 function App() {
 
   return (
@@ -26,19 +28,23 @@ function App() {
         </Route>
 
         <Route path= "/understanding">
-          <FeedbackFeeling />
+          <FeedbackUnderstanding />
         </Route>
 
         <Route path= "/support">
-          <FeedbackFeeling />
+          <FeedbackSupported />
         </Route>
 
         <Route path= "/comment">
-          <FeedbackFeeling />
+          <FeedbackComments />
         </Route>
 
         <Route path= "/review">
-          <FeedbackFeeling />
+          <FeedbackReview />
+        </Route>
+
+        <Route path= "/success">
+          <FeedbackSuccess />
         </Route>
 
       </Router>
