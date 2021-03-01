@@ -19,7 +19,6 @@ function Review() {
     .catch((error) => {
       console.log("Error posting feedback", error);
     });
-    
   }
 
   const clearFeedbackInput = () => {

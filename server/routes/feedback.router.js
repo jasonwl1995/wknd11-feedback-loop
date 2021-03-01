@@ -22,8 +22,8 @@ router.post('/', (req, res) => {
   console.log('data', paramArgs);
   
   pool.query(sqlText, paramArgs)
-    .then((res) => {
-      console.log('post request completed', res);
+    .then((dbResponse) => {
+      console.log('post request completed');
       res.sendStatus(200);
     })
     .catch((error) => {
