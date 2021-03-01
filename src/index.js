@@ -14,6 +14,9 @@ const feedbackReducer = (state = {}, action) => {
       case 'UPDATE_FEELING':
         console.log('state', state);
         return {...state, feelingInput: action.payload};
+        break;
+      case 'UPDATE_UNDERSTANDING':
+        return {...state, understandingInput: action.payload};
 
       break;
       default:

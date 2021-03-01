@@ -24,10 +24,10 @@ function Feelings() {
     });
 
     // Clear input
-    setFeeling(0);
+    setFeeling(1);
 
     // Go to Understanding Page
-    history.push('/review');
+    history.push('/understanding');
   }
 
   return (
