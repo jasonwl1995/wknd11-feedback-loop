@@ -26,7 +26,7 @@ function Understanding() {
     setUnderstanding(1);
 
     // Go to supported Page
-    history.push('/review');
+    history.push('/support');
   }
 
   return (

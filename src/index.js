@@ -17,7 +17,13 @@ const feedbackReducer = (state = {}, action) => {
         break;
       case 'UPDATE_UNDERSTANDING':
         return {...state, understandingInput: action.payload};
-
+        break;
+      case 'UPDATE_SUPPORT':
+        return {...state, supportedInput: action.payload};
+        break;
+      case 'UPDATE_COMMENTS':
+        return {...state, comments: action.payload};
+  
       break;
       default:
         return state;
